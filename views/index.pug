@@ -1,3 +1,6 @@
-h1 #{title}
+extends layout
 
-p Welcome to express
+block content
+    h1 #{title}
+
+    a(href=`createrect/${title}`) click me
