@@ -3,6 +3,8 @@ extends layout
 block content
     a(href=`/create`)
         button(type="button") + add
+    a(href=`/display`)
+        button(type="button") display rects
     table(style='width:100%', border='1')
         tr
             th id
@@ -11,7 +13,11 @@ block content
             th height
             th color
             th freq
+            th border
+            th radius
+            th font
             th 
+            th
         each rect in rectangles
             tr
                 th #{rect.rect_id}
@@ -20,7 +26,13 @@ block content
                 th #{rect.height}
                 th #{rect.color}
                 th #{rect.freq}
+                th #{rect.border}
+                th #{rect.borderradius}
+                th #{rect.font}
                 th 
                     a(href=`rect/${rect.rect_id}`)
                         button(type="button") edit
+                 th 
+                    a(href=`delete/${rect.rect_id}`)
+                        button(type="button") delete
             

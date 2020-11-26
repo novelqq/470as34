@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+    each rect in rectangles
+        - var n = 0;
+        while n < rect.freq
+            div(style=`width:${rect.width}px; height:${rect.height}px; background-color:${rect.color}; font-family: ${rect.font}; border:${rect.border}px solid #000; border-radius: ${rect.borderradius}em;`) #{rect.date}
+            - n++
+
+
+
+            

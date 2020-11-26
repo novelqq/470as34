@@ -3,10 +3,13 @@ CREATE TABLE rects (
 	rect_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	width DECIMAL(10,2),
     height DECIMAL(10,2),
-	color VARCHAR(30),
+	color VARCHAR(7),
 	freq INT UNSIGNED,
+	border int UNSIGNED,
+	borderradius INT UNSIGNED,
+	font VARCHAR(30),
 	PRIMARY KEY(rect_id)
 );
     
-INSERT INTO rects (width, height, color, freq)
-VALUES (300, 200, '#ff0000', 1);
+INSERT INTO rects (width, height, color, freq, border, borderradius, font)
+VALUES (300, 200, '#ff0000', 1, 1, 2, 'courier');
