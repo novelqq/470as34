@@ -7,9 +7,9 @@ CREATE TABLE rects (
 	freq INT UNSIGNED,
 	border int UNSIGNED,
 	borderradius INT UNSIGNED,
-	font VARCHAR(30),
+	animate INT UNSIGNED,
 	PRIMARY KEY(rect_id)
 );
     
-INSERT INTO rects (width, height, color, freq, border, borderradius, font)
-VALUES (300, 200, '#ff0000', 1, 1, 2, 'courier');
+INSERT INTO rects (width, height, color, freq, border, borderradius, animate)
+VALUES (300, 200, '#ff0000', 1, 1, 2, 1);

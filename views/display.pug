@@ -1,10 +1,13 @@
-extends layout.pug
+extends layout
 
 block content
     each rect in rectangles
         - var n = 0;
         while n < rect.freq
-            div(style=`width:${rect.width}px; height:${rect.height}px; background-color:${rect.color}; font-family: ${rect.font}; border:${rect.border}px solid #000; border-radius: ${rect.borderradius}em;`) #{rect.rect_date}
+            if rect.animate == 1
+                .animated(style=`width:${rect.width}px; height:${rect.height}px; background-color:${rect.color}; border:${rect.border}px solid #000; border-radius: ${rect.borderradius}em;`) #{rect.rect_date}
+            else
+                div(style=`width:${rect.width}px; height:${rect.height}px; background-color:${rect.color}; border:${rect.border}px solid #000; border-radius: ${rect.borderradius}em;`) #{rect.rect_date}
             - n++
 
 
