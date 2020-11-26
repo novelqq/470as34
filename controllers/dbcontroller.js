@@ -35,13 +35,13 @@ exports.vieweditrect = function(req, res, next) {
 }
 
 exports.postedit = function(req, res, next) {
-    let sql = `UPDATE rects SET width = ${req.body.width}, height = ${req.body.height}, color = '${req.body.color}', freq = ${req.body.freq}, border = ${req.body.border}, borderradius = ${req.body.borderradius}, font = '${req.body.font}';`;
+    let sql = `UPDATE rects SET width = ${req.body.width}, height = ${req.body.height}, color = '${req.body.color}', freq = ${req.body.freq}, border = ${req.body.border}, borderradius = ${req.body.borderradius}, font = '${req.body.font}' WHERE rect_id=${req.params.id};`;
     mysqllib.executeQuery(sql).then((d) => {
         res.redirect("/");
     });
 }
 exports.editrect = function(req, res, next) {
-    let sql = `UPDATE rects SET width = ${req.body.width}, height = ${req.body.height}, color = '${req.body.color}', freq = ${req.body.freq}, border = ${req.body.border}, borderradius = ${req.body.borderradius}, font = '${req.body.font}';`;
+    let sql = `UPDATE rects SET width = ${req.body.width}, height = ${req.body.height}, color = '${req.body.color}', freq = ${req.body.freq}, border = ${req.body.border}, borderradius = ${req.body.borderradius}, font = '${req.body.font}' WHERE rect_id=${req.params.id};`;
     mysqllib.executeQuery(sql).then((d) => {
         res.redirect("/");
     });
