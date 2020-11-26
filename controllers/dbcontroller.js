@@ -13,7 +13,7 @@ exports.createrect = function(req, res) {
 }
 
 exports.postrect = function(req, res, next) {
-    let sql = `INSERT INTO rects (width, height, color, freq) VALUES (${req.body.width}, ${req.body.height}, ${req.body.height}, '${req.body.color}', ${req.body.freq});`;
+    let sql = `INSERT INTO rects (width, height, color, freq) VALUES (${req.body.width}, ${req.body.height}, '${req.body.color}', ${req.body.freq});`;
     mysqllib.executeQuery(sql).then((d) => {
         res.redirect("/");
     });

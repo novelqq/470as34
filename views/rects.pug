@@ -12,12 +12,12 @@ block content
             th 
         each rect in rectangles
             tr
-                th rect.rect_id
-                th rect.rect_date
-                th rect.width
-                th rect.height
-                th rect.color
-                th rect.freq
+                th #{rect.rect_id}
+                th #{rect.rect_date}
+                th #{rect.width}
+                th #{rect.height}
+                th #{rect.color}
+                th #{rect.freq}
                 th 
                     a(href=`rect/${rect.rect_id}`)
                         button(type="button") edit
