@@ -1,0 +1,12 @@
+CREATE TABLE rects (
+	rect_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	rect_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	width DECIMAL(10,2),
+    height DECIMAL(10,2),
+	color VARCHAR(30),
+	freq INT UNSIGNED,
+	PRIMARY KEY(rect_id)
+);
+    
+INSERT INTO rects (width, height, color, freq)
+VALUES (300, 200, '#ff0000', 1);

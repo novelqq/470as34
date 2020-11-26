@@ -1,19 +1,19 @@
 extends layout
 
 block content
-    h1= "Create a new Rectangle"
+    h1 edit rectangle #{rect.id}
 
     form(method='POST' action='')
         label(for='width') Width of Rectangle:
-        input#width(type='number', name='width')
+        input#width(type='number', name='width', value=`${rect.width}`)
         br
         label(for='height') Height of Rectangle:
-        input#height(type='number', name='height')
+        input#height(type='number', name='height', value=`${rect.height}`)
         br
         label(for='color') Color of Rectangle:
-        input#color(type='color', name='color')
+        input#color(type='color', name='color', value=`${rect.color}`)
         br
         label(for='freq') Number of occurences:
-        input#freq(type='number', name='freq')
+        input#freq(type='number', name='freq', value=`${rect.freq}`)
         br
         input(type='submit')
